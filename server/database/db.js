@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 const DBConnection = async () =>{
-    const MONGO_URI  = `mongodb://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@ac-uonkmme-shard-00-00.rrfxpny.mongodb.net:27017,ac-uonkmme-shard-00-01.rrfxpny.mongodb.net:27017,ac-uonkmme-shard-00-02.rrfxpny.mongodb.net:27017/?ssl=true&replicaSet=atlas-6ewvf5-shard-0&authSource=admin&retryWrites=true&w=majority`;
+    const MONGO_URI  = `mongodb+srv://user1:mongodb@drop-mate.rrfxpny.mongodb.net/?retryWrites=true&w=majority&appName=Drop-Mate`;
     try{
 await mongoose.connect(MONGO_URI , {useNewUrlParser: true});
 console.log('Connected to MongoDB');
